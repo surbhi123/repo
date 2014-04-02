@@ -1,0 +1,17 @@
+create table url1
+(
+url_id INT identity(1,1),
+url varchar(30),
+constraint abc PRIMARY KEY(url_id)
+);
+
+---------------------------------------------------------------------------------------------------------------------------
+
+create table tag1
+(
+tag_id int identity(100,1),
+tag varchar(10),
+url_id int,
+CONSTRAINT abc1 FOREIGN KEY (url_id)
+REFERENCES url1(url_id)
+);
